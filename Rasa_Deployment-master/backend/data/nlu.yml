@@ -1,0 +1,143 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - doctor
+    - hello doctor
+    - hello doctor there?
+    - is there doctor?
+    - i want to meet doctor
+    - doctor please
+    - i need help
+    - help needed
+    - i need to meet doctor
+    - is doctor there
+    - doctor help
+    - help me
+    - meet doctor
+    - doctor there?
+    - can i talk with doctor
+    - talk with doctor
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: social_media_links
+  examples: |
+    - link to [facebook]{"entity":"platform", "value":"facebook"}
+    - [facebook]{"entity":"platform", "value":"facebook"} link
+    - [Instagram{"entity":"platform", "value":"Instagram"} page
+    - [Youtube]{"entity":"platform", "value":"Youtube"} link
+    - link to [youtube]{"entity":"platform", "value":"youtube"} channel
+    - link me to [twitter]{"entity":"platform", "value":"twitter"}
+    - [twitter]{"entity":"platform", "value":"twitter"}
+    - [youtube]{"entity":"platform", "value":"youtube"}
+    - [twitter]{"entity":"platform", "value":"twitter"} feed link
+    - I need link to [facebook]{"entity":"platform", "value":"facebook"}
+    - [instagram]{"entity":"platform", "value":"instagram"} link
+    - link to [instagram]{"entity":"platform", "value":"instagram"}
+    - [instgram]{"entity":"platform", "value":"instagram"} page link
+    - [insta]{"entity":"platform", "value":"insta"} page link
+    - [instagram]{"entity":"platform", "value":"instagram"} link 
+    - i want [instagram]{"entity":"platform", "value":"instagram"} link
+    - i want [insta]{"entity":"platform", "value":"insta"} link
+    - [fb]{"entity":"platform", "value":"fb"} link 
+    - i want [fb]{"entity":"platform", "value":"fb"}
+    - link to [tweet]{"entity":"platform", "value":"tweet"}
+    - [INSTAGRAM]{"entity":"platform", "value":"INSTAGRAM"} link
+    - link to [FB]{"entity":"platform", "value":"FB"}
+    - [TWEET]{"entity":"platform", "value":"TWEET"} feed link
+    - I want [YOU TUBE]{"entity":"platform", "value":"YOU TUBE"} link
+    - [you tube]{"entity":"platform", "value":"you tube"} channel link
+    - Give me [yt]{"entity":"platform", "value":"yt"} link
+    - [YT]{"entity":"platform", "value":"YT"} link please
+
+- intent: all_social_media
+  examples: |
+    - social media links
+    - give social links
+    - give Social media links
+    - links to social media 
+    - links to social
+    - social links media
+    - i need social media links
+    - links social
+    - social media
+    - media
+    - social
+    - give me social media
+    - i want social media
+
+- intent: book_an_appointment
+  examples: |
+    - book me an appointment
+    - appointment
+    - booking
+    - appointment booking
+    - appointment with doctor
+    - doctors appointment
+    - doctor's appointment
+    - can i have an appointment with the doctor
+    - doctor's appointment
+    - i want to book an appointment with doctor
+    - want to schedule an appointment 
+    - schedule booking
+    - schedule appointment
+    - is appointment available?
+    - appointment needed
+    - in need of appointment
+    - want to meet doctor
+    - meeting with doctor
+    - i want to meet someone
+
+- intent: name_appointment
+  examples: |
+    - my name is [suyog sujit savalkar]{"entity":"name","value":"suyog sujit savalkar"}
+    - [Chinswami Vengopal Iyer]{"entity":"name","value":"Chinswami Vengopal Iyer"}
+    - [yogita sujit savalkar]{"entity":"name","value":"yogita sujit savalkar"}
+    - [Suyog Savalkar]{"entity":"name","value":"Suyog Savalkar"}
+    - my name [john doe]{"entity":"name","value":"john doe"}
+    - [Akshay Kumar]{"entity":"name","value":"Akshay Kumar"}
+    - [Sujit Dynaneshwar Savalkar]{"entity":"name","value":"Sujit Dnyaneshwar Savalkar"} is my name
+    - [shree savalkar]{"entity":"name","value":"shree savalkar"}
+    - [Shree Sujit Savalkar]{"entity":"name","value":"Shree Sujit Savalkar"}
+    - [jhon abhram doe]{"entity":"name","value":"john abhram doe"}
+    - [Kim Jong]{"entity":"name","value":"Kim Jong"}
+    - name: [Shree Savalkar]{"entity":"name","value":"Shree Savalkar"}
+    - [Suyog Sujit Savalkar]{"entity":"name","value":"Suyog Sujit Savalkar"} : name
+
+- intent: email_client
+  examples: |
+    - email: [suyog23@gmail.com]{"entity":"email", "value":"suyog23@gmail.com"}
+    - [suyog@email.com]{"entity":"email", "value":"suyog@email.com"} : email
+    - [sdsavalkar@bajajauto.co.in]{"entity":"email", "value":"sdsavalkar@bajajauto.co.in"}
+    - [yoyo.djhb@gmail.com]{"entity":"email", "value":"yoyo.dhjb@gmail.com"}
+    - my email is [yoyo23.bajaj@gmail.in]{"entity":"email", "value":"yoyo23.bajaj@gmail.in"}
+    - [ruyog.tech.hgd@email.co.in]{"entity":"email", "value":"ruyog.tech.hgd@email.co.in"}
+    - [utog@tech.in]{"entity":"email", "value":"utog@tech.in"} my email
+    - [yoyo@gmail.com]{"entity":"email", "value":"yoyo@gmail.com"}

@@ -1,0 +1,80 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- social_media_links
+- all_social_media
+- book_an_appointment
+- name_appointment
+- email_client
+- give a message
+entities:
+- platform
+- email
+- name
+slots:
+  platform:
+    type: text
+    influence_conversation: true
+  name:
+    type: text
+    influence_conversation: true
+  email:
+    type: text
+    influence_conversation: true
+  message:
+    type: text
+    influence_conversation: true
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_greet:
+  - buttons:
+    - payload: /book_an_appointment
+      title: Book an appointment
+    - payload: /all_social_media
+      title: Connect with us on social media
+    text: Hey! I am Mahendra. I am assisting DR. Nitesh Dubey. How can I help you?
+  utter_goodbye:
+  - text: Bye
+  utter_happy_to_connect:
+  - text: Happy to connect :)
+  utter_all_social:
+  - buttons:
+    - payload: /social_media_links{"platform":"facebook"}
+      title: Facebook
+    - payload: /social_media_links{"platform":"twitter"}
+      title: Twitter
+    - payload: /social_media_links{"platform":"instagram"}
+      title: Instagram
+    - payload: /social_media_links{"platform":"youtube"}
+      title: Youtube
+    text: 'These are the social media links:'
+  utter_appointment_starts:
+  - text: Great! Let's book an appointment for you! Please answer some questions so
+      that I can give it to the doctor.
+  utter_ask_name:
+  - text: Please provide us with your **full name**...
+  utter_ask_email:
+  - text: Please provide your working **email address** as further information will
+      be sent on it..
+  utter_details_thanks:
+  - text: Thanks for following up.. Name recorded was {Name} and email is {Email}
+  utter_calendly:
+  - text: Please click on proceed for further information about booking
+      confirmation.<a href="https://calendly.com/suyog_demo/appointment/">Proceed</a>
+actions:
+- action_hello_world
+- action_submit
+forms:
+  user_details_form:
+    email:
+    - entity: email
+      type: from_entity
+    name:
+    - entity: name
+      type: from_entity
+
