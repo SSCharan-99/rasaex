@@ -2,36 +2,40 @@ version: "2.0"
 
 stories:
 
+- story: Placement
+  steps:
+  - intent: Placement
+  - action: utter_placement
+
+
+- story: About MSIT
+  steps:
+  - intent: info_MSIT
+  - action: utter_info_MSIT
+
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
 
-- story: all social path
+- story: sad path 1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: all_social_media
-  - action: utter_all_social
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
 
-- story: individual social
+- story: sad path 2
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: social_media_links
-  - action: action_hello_world
-  - action: utter_happy_to_connect
-
-- story: sad individual_then_all
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: social_media_links
-    entities:
-    - platform: "facebook"
-  - slot_was_set:
-      - platform: "facebook"
-  - action: action_hello_world
-  - action: utter_happy_to_connect
-  - intent: all_social_media
-  - action: utter_all_social
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

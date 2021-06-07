@@ -7,23 +7,7 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Activate form
+- rule: Say 'I am a bot' anytime the user challenges
   steps:
-  - intent: book_an_appointment
-  - action: utter_appointment_starts
-  - action: user_details_form
-  - active_loop: user_details_form
-
-- rule: Submit form
-  condition:
-  # Condition that form is active.
-  - active_loop: user_details_form
-  steps:
-  # Form is deactivated
-  - action: user_details_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  # The actions we want to run when the form is submitted.
-  - action: action_submit
-  - action: utter_calendly
+  - intent: bot_challenge
+  - action: utter_iamabot

@@ -5,7 +5,6 @@ COPY . /app
 COPY ./data /app/data
 
 
-
 VOLUME /app
 VOLUME /app/data
 VOLUME /app/models
